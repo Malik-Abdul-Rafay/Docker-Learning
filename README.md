@@ -24,11 +24,11 @@ docker images           # List all downloaded Docker images
 ```
 
 ```bash
-docker stop <container_id>   # Stop a running container by its ID or name
+docker stop <container_id> or <container_name>   # Stop a running container by its ID or name
 ```
 
 ```bash
-docker rm <container_id>     # Remove a container by its ID or name
+docker rm <container_id>  or <container_name>    # Remove a container by its ID or name
 ```
 
 ```bash
