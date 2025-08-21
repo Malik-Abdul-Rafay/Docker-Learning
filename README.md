@@ -1,96 +1,150 @@
-# 🐳 Docker Learning Notes (Kali Linux)
+# 🐳 Docker Quick Reference (Kali Linux)
 
-Ye notes maine **Kali Linux** par Docker seekhte waqt banaye hain. Isme installation, basic commands, containers, images, volumes, networking, docker-compose aur troubleshooting sab ek hi page par hain.  
-
----
-
-## ⚙️ Installation on Kali Linux
-```bash
-sudo apt update && sudo apt upgrade -y       # System update
-sudo apt install docker.io -y                # Install Docker
-sudo systemctl enable docker --now           # Enable & Start service
-sudo systemctl status docker                 # Check service status
-docker --version                             # Verify version
-docker run hello-world                       # Test installation
-```
+Ye notes **Kali Linux** par Docker ke liye quick reference guide hain.  
+Har command alag code block me hai taake GitHub par easy copy ho.  
 
 ---
 
 ## 📝 Basic Commands
+
 ```bash
-docker ps              # Running containers
-docker ps -a           # All containers (running + stopped)
-docker images          # Images list
-docker stop <id>       # Stop container
-docker rm <id>         # Remove container
-docker rmi <id>        # Remove image
-docker system prune -a # Clean unused data
+docker --version
+```
+
+```bash
+docker ps
+```
+
+```bash
+docker ps -a
+```
+
+```bash
+docker images
+```
+
+```bash
+docker stop <container_id>
+```
+
+```bash
+docker rm <container_id>
+```
+
+```bash
+docker rmi <image_id>
+```
+
+```bash
+docker system prune -a
 ```
 
 ---
 
 ## 📦 Containers
+
 ```bash
-docker run -it ubuntu bash     # Start ubuntu container with shell
-docker exec -it <id> bash      # Enter existing container
-docker logs <id>               # Show container logs
-docker inspect <id>            # Show detailed info
+docker run -it ubuntu bash
+```
+
+```bash
+docker exec -it <container_id> bash
+```
+
+```bash
+docker logs <container_id>
+```
+
+```bash
+docker inspect <container_id>
 ```
 
 ---
 
 ## 🖼️ Images
+
 ```bash
-docker pull ubuntu             # Download ubuntu image
-docker build -t myapp .        # Build from Dockerfile
-docker tag myapp myapp:v1      # Tag image
+docker pull ubuntu
+```
+
+```bash
+docker build -t myapp .
+```
+
+```bash
+docker tag myapp myapp:v1
 ```
 
 ---
 
 ## 💾 Volumes
+
 ```bash
 docker volume create mydata
+```
+
+```bash
 docker run -v mydata:/app ubuntu
 ```
 
 ---
 
 ## 🌐 Networking
+
 ```bash
 docker network ls
+```
+
+```bash
 docker network create mynetwork
+```
+
+```bash
 docker run --network=mynetwork ubuntu
 ```
 
 ---
 
-## 🛠️ Docker Compose (Optional on Kali)
+## 🛠️ Docker Compose (Optional)
+
 ```bash
-sudo apt install docker-compose -y
 docker-compose --version
+```
+
+```bash
 docker-compose up
+```
+
+```bash
 docker-compose down
 ```
 
 ---
 
 ## 💡 Useful Tips
+
 ```bash
-sudo usermod -aG docker $USER   # Run Docker without sudo
-newgrp docker                   # Apply group changes
-docker stats                    # Show resource usage
+sudo usermod -aG docker $USER
+```
+
+```bash
+newgrp docker
+```
+
+```bash
+docker stats
 ```
 
 ---
 
-## 🛠️ Troubleshooting on Kali
+## 🛠️ Troubleshooting
+
 ```bash
-# Fix permission denied
 sudo usermod -aG docker $USER
 newgrp docker
+```
 
-# Start service if not running
+```bash
 sudo systemctl start docker
 sudo systemctl enable docker
 ```
@@ -104,4 +158,4 @@ sudo systemctl enable docker
 
 ---
 
-✨ Ye ek hi page ka **quick reference guide** hai for Docker on Kali Linux.  
+✨ Ye **quick reference guide** hai for Docker commands on Kali Linux.
