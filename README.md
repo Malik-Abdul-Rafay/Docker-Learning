@@ -31,7 +31,7 @@ docker stop <container_id> or <container_name>   # Stop a running container by i
 ```
 
 ```bash
-docker rm <container_id>   # Remove a container by its ID or name
+docker rm <container_id> or <container_name>   # Remove a container by its ID or name
 ```
 
 ```bash
