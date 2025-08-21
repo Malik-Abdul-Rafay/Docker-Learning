@@ -1,42 +1,42 @@
 # 🐳 Docker Quick Reference (Kali Linux)
 
 Ye notes **Kali Linux** par Docker ke liye quick reference guide hain.  
-Har command alag code block me hai taake GitHub par easy copy ho.  
+Har command alag code block me hai taake GitHub par easy copy ho. Har command ke sath comment bhi hai jo explain karta hai ke ye command kya karti hai.  
 
 ---
 
 ## 📝 Basic Commands
 
 ```bash
-docker --version
+docker --version        # Check installed Docker version
 ```
 
 ```bash
-docker ps
+docker ps               # List currently running containers
 ```
 
 ```bash
-docker ps -a
+docker ps -a            # List all containers, running and stopped
 ```
 
 ```bash
-docker images
+docker images           # List all downloaded Docker images
 ```
 
 ```bash
-docker stop <container_id>
+docker stop <container_id>   # Stop a running container by its ID or name
 ```
 
 ```bash
-docker rm <container_id>
+docker rm <container_id>     # Remove a container by its ID or name
 ```
 
 ```bash
-docker rmi <image_id>
+docker rmi <image_id>        # Remove a Docker image by its ID or name
 ```
 
 ```bash
-docker system prune -a
+docker system prune -a       # Remove all unused containers, networks, images, and build cache
 ```
 
 ---
@@ -44,19 +44,19 @@ docker system prune -a
 ## 📦 Containers
 
 ```bash
-docker run -it ubuntu bash
+docker run -it ubuntu bash      # Run a new Ubuntu container interactively with a bash shell
 ```
 
 ```bash
-docker exec -it <container_id> bash
+docker exec -it <container_id> bash  # Access a running container's shell
 ```
 
 ```bash
-docker logs <container_id>
+docker logs <container_id>          # Show logs of a specific container
 ```
 
 ```bash
-docker inspect <container_id>
+docker inspect <container_id>       # Display detailed information about a container
 ```
 
 ---
@@ -64,15 +64,15 @@ docker inspect <container_id>
 ## 🖼️ Images
 
 ```bash
-docker pull ubuntu
+docker pull ubuntu              # Download Ubuntu image from Docker Hub
 ```
 
 ```bash
-docker build -t myapp .
+docker build -t myapp .         # Build an image from a Dockerfile in current directory and tag it as 'myapp'
 ```
 
 ```bash
-docker tag myapp myapp:v1
+docker tag myapp myapp:v1       # Tag an existing image with a version or new name
 ```
 
 ---
@@ -80,11 +80,11 @@ docker tag myapp myapp:v1
 ## 💾 Volumes
 
 ```bash
-docker volume create mydata
+docker volume create mydata        # Create a new Docker volume named 'mydata'
 ```
 
 ```bash
-docker run -v mydata:/app ubuntu
+docker run -v mydata:/app ubuntu   # Mount volume 'mydata' inside a container at /app
 ```
 
 ---
@@ -92,15 +92,15 @@ docker run -v mydata:/app ubuntu
 ## 🌐 Networking
 
 ```bash
-docker network ls
+docker network ls                  # List all Docker networks
 ```
 
 ```bash
-docker network create mynetwork
+docker network create mynetwork    # Create a new Docker network named 'mynetwork'
 ```
 
 ```bash
-docker run --network=mynetwork ubuntu
+docker run --network=mynetwork ubuntu  # Run a container connected to a specific network
 ```
 
 ---
@@ -108,15 +108,15 @@ docker run --network=mynetwork ubuntu
 ## 🛠️ Docker Compose (Optional)
 
 ```bash
-docker-compose --version
+docker-compose --version       # Check installed Docker Compose version
 ```
 
 ```bash
-docker-compose up
+docker-compose up              # Start services defined in docker-compose.yml
 ```
 
 ```bash
-docker-compose down
+docker-compose down            # Stop and remove services defined in docker-compose.yml
 ```
 
 ---
@@ -124,15 +124,15 @@ docker-compose down
 ## 💡 Useful Tips
 
 ```bash
-sudo usermod -aG docker $USER
+sudo usermod -aG docker $USER  # Add current user to docker group to run Docker without sudo
 ```
 
 ```bash
-newgrp docker
+newgrp docker                  # Apply the new group membership without logging out
 ```
 
 ```bash
-docker stats
+docker stats                   # Show real-time resource usage of running containers
 ```
 
 ---
@@ -141,12 +141,12 @@ docker stats
 
 ```bash
 sudo usermod -aG docker $USER
-newgrp docker
+newgrp docker                  # Fix 'permission denied while connecting to Docker daemon'
 ```
 
 ```bash
 sudo systemctl start docker
-sudo systemctl enable docker
+sudo systemctl enable docker   # Ensure Docker service is running on system startup
 ```
 
 ---
@@ -158,4 +158,4 @@ sudo systemctl enable docker
 
 ---
 
-✨ Ye **quick reference guide** hai for Docker commands on Kali Linux.
+✨ Ye **quick reference guide with comments** hai for Docker commands on Kali Linux.
