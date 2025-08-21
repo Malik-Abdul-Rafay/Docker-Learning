@@ -35,7 +35,7 @@ docker rm <container_id> or <container_name>   # Remove a container by its ID or
 ```
 
 ```bash
-docker rmi <image_id>        # Remove a Docker image by its ID or name
+docker rmi <image_id> or <image_name>        # Remove a Docker image by its ID or name
 ```
 
 ```bash
