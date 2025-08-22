@@ -42,6 +42,20 @@ docker rmi <image_id> or <image_name>        # Remove a Docker image by its ID o
 docker system prune -a       # Remove all unused containers, networks, images, and build cache
 ```
 
+```bash
+docker logs <conatiner_id>       # Check Logs Conatiner
+
+➡️ Terminal to check files, environment, etc. inside a running container
+
+```bash
+docker exec -it <conatiner_id_or_name> /bin/bash
+```
+
+```bash
+docker exec -it <container_id_or_name> /bin/sh
+```
+
+
 ---
 
 ## 📦 Containers
