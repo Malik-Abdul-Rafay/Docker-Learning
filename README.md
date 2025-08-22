@@ -44,7 +44,7 @@ docker system prune -a       # Remove all unused containers, networks, images, a
 
 ```bash
 docker logs <conatiner_id>       # Check Logs Conatiner
-
+```
 ➡️ Terminal to check files, environment, etc. inside a running container
 
 ```bash
