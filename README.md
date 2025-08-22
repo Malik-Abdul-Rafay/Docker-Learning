@@ -47,20 +47,37 @@ docker system prune -a       # Remove all unused containers, networks, images, a
 ## 📦 Containers
 
 ```bash
-docker run -it ubuntu bash      # Run a new Ubuntu container interactively with a bash shell
+docker run ubuntu    # Create & run a new container
 ```
+➡️ Run an **Ubuntu container** but it will exit immediately because no process is running.
 
 ```bash
-docker exec -it <container_id> bash  # Access a running container's shell
+docker run -it ubuntu bash
 ```
+➡️ Run container in background
 
 ```bash
-docker logs <container_id>          # Show logs of a specific container
+docker run -d ubuntu
 ```
+➡️ Run an **interactive Ubuntu container** and open a bash shell to run commands inside.
 
 ```bash
-docker inspect <container_id>       # Display detailed information about a container
+docker run --name myubuntu ubuntu
 ```
+➡️ Port Blinding in **Container**.
+
+```bash
+docker run -p<host_port>:<conatiner_port> <image_name>
+```
+
+
+---
+
+## ✅ Recommendations
+
+- **For exploration:** `docker run -it ubuntu bash`
+- **For background usage:** `docker run -dit --name myubuntu ubuntu`
+
 
 ---
 
